@@ -7,6 +7,7 @@ public class Block_Loop : MonoBehaviour {
 	public GameObject[] Block;	//Created Obstacle
 	public GameObject A_Zone;	//Middle Obstacle
 	public GameObject B_Zone;	//Right Obstalce
+	public GameObject C_Zone;
 	
 	// Update is called once per frame
 	void Update () {
@@ -17,12 +18,16 @@ public class Block_Loop : MonoBehaviour {
 
 		A_Zone.transform.Translate (Vector3.left * Speed * Time.deltaTime);
 		B_Zone.transform.Translate (Vector3.left * Speed * Time.deltaTime);
+		C_Zone.transform.Translate (Vector3.left * Speed * Time.deltaTime);
 
 		if (B_Zone.transform.position.x <= 0) {
-
+			
 			Remove (A_Zone);
-
 			A_Zone = B_Zone;
+
+			//Remove(B_Zone);
+			B_Zone = C_Zone;
+
 			Create ();
 		}
 	}
@@ -31,13 +36,17 @@ public class Block_Loop : MonoBehaviour {
 
 		int randomBlock = Random.Range (0, Block.Length);
 
-		B_Zone = Instantiate (Block[randomBlock], 
-		                      new Vector3 (A_Zone.transform.position.x+30, -5, 0), 
+		//B_Zone = Instantiate (Block[randomBlock], 
+		//                      new Vector3 (A_Zone.transform.position.x + 30, -5, 0), 
+		//                      transform.rotation ) as GameObject;
+
+		C_Zone = Instantiate (Block[randomBlock], 
+		                      new Vector3 (A_Zone.transform.position.x + 60, -5, 0), 
 		                      transform.rotation ) as GameObject;
 	}
 
-	void Remove(GameObject Block_A){
-		Destroy (Block_A);
+	void Remove(GameObject Block_N){
+		Destroy (Block_N);
 	}
 
 }

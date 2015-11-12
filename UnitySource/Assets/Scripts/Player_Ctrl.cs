@@ -26,10 +26,6 @@ public class Player_Ctrl : MonoBehaviour {
 
 		GetComponent<Rigidbody> ().WakeUp ();
 
-		//KeyBoardInput ();
-
-		//SpaceKeyAccelerate();
-
 		SpaceKeyFlying ();
 
 	}
@@ -133,6 +129,4 @@ public class Player_Ctrl : MonoBehaviour {
 			GameOver();
 		}
 	}
-
-
 }
