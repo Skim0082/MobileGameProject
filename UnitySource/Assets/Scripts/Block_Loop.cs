@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Block_Loop : MonoBehaviour {
 
-	public float Speed = 10;		//Obstacle speed
+	public float Speed = 10;	//Obstacle speed
 	public GameObject[] Block;	//Created Obstacle
 	public GameObject A_Zone;	//Middle Obstacle
 	public GameObject B_Zone;	//Right Obstalce
@@ -25,7 +25,6 @@ public class Block_Loop : MonoBehaviour {
 			Remove (A_Zone);
 			A_Zone = B_Zone;
 
-			//Remove(B_Zone);
 			B_Zone = C_Zone;
 
 			Create ();
@@ -36,10 +35,6 @@ public class Block_Loop : MonoBehaviour {
 
 		int randomBlock = Random.Range (0, Block.Length);
 
-		//B_Zone = Instantiate (Block[randomBlock], 
-		//                      new Vector3 (A_Zone.transform.position.x + 30, -5, 0), 
-		//                      transform.rotation ) as GameObject;
-
 		C_Zone = Instantiate (Block[randomBlock], 
 		                      new Vector3 (A_Zone.transform.position.x + 60, -5, 0), 
 		                      transform.rotation ) as GameObject;
@@ -48,5 +43,4 @@ public class Block_Loop : MonoBehaviour {
 	void Remove(GameObject Block_N){
 		Destroy (Block_N);
 	}
-
 }

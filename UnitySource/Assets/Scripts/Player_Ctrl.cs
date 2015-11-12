@@ -3,8 +3,6 @@ using System.Collections;
 
 public enum PlayerStatus{
 	Fly,
-	Accel,
-	Turbo,
 	Death
 }
 
@@ -30,6 +28,10 @@ public class Player_Ctrl : MonoBehaviour {
 
 	}
 
+	void Start(){
+		PS = PlayerStatus.Fly;
+	}
+
 	void SpaceKeyFlying(){
 		
 		if (Input.GetKey(KeyCode.Space) && PS != PlayerStatus.Death) {
@@ -49,50 +51,6 @@ public class Player_Ctrl : MonoBehaviour {
 		}
 	}
 
-	void SpaceKeyAccelerate(){
-
-		if (Input.GetKeyDown (KeyCode.Space) && PS != PlayerStatus.Death) {
-
-			if(PS == PlayerStatus.Accel){
-				Turbo();
-			}
-			if(PS == PlayerStatus.Fly){
-				Accelerate();
-			}
-		}
-	}
-	
-	void KeyBoardInput(){
-
-		if(Input.GetKey(KeyCode.UpArrow)){
-
-			this.transform.Translate(Vector3.up * FlySpeed * Time.deltaTime);
-		}
-
-		if(Input.GetKey(KeyCode.DownArrow)){
-			
-			this.transform.Translate(Vector3.down * FlySpeed * Time.deltaTime);
-		}
-	}
-
-	void Accelerate(){
-		PS = PlayerStatus.Accel;
-		SoundPlay (1);
-		aSpeaker.SendMessage ("SoundPlay");
-		GetComponent<Rigidbody> ().AddForce (new Vector3 (0, Accel_Power, 0));
-	}
-
-	void Turbo(){
-		PS = PlayerStatus.Turbo;
-		//SoundPlay (1);
-		aSpeaker.SendMessage ("SoundPlay");
-		GetComponent<Rigidbody> ().AddForce (new Vector3 (0, Accel_Power, 0));
-	}
-
-	void Fly(){
-		PS = PlayerStatus.Fly;
-	}
-
 	void GameOver(){
 		PS = PlayerStatus.Death;
 		SoundPlay (2);
@@ -101,12 +59,6 @@ public class Player_Ctrl : MonoBehaviour {
 
 	void SoundPlay(int Num){
 		AudioSource.PlayClipAtPoint (Sound [Num], transform.position);
-	}
-
-	void OnCollisionEnter(Collision collision){
-		if (PS != PlayerStatus.Fly && PS != PlayerStatus.Death) {
-			Fly ();
-		}
 	}
 
 	void GetItem(){
