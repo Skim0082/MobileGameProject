@@ -1,0 +1,39 @@
+Base path: C:/Program Files/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-7092
+Cmd: getPlatforms
+Cmd: compileSnippet
+  error: 2 plat 1 at (100): 'vert': output parameter 'o' not completely initialized\nCompiling Vertex program with DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF
+  api=1 type=0 insize=10408 outsize=0 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 4 at (100): 'vert': output parameter 'o' not completely initialized\nCompiling Vertex program with DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF
+  api=4 type=0 insize=10408 outsize=0 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 4 at (100): 'vert': output parameter 'o' not completely initialized\nCompiling Vertex program with DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON
+  api=4 type=0 insize=10408 outsize=0 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 4 at (100): 'vert': output parameter 'o' not completely initialized\nCompiling Vertex program with DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON
+  api=4 type=0 insize=10408 outsize=0 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 1 at (100): 'vert': output parameter 'o' not completely initialized\nCompiling Vertex program with POINT
+  api=1 type=0 insize=7488 outsize=0 kw=POINT pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 4 at (100): 'vert': output parameter 'o' not completely initialized\nCompiling Vertex program with DIRECTIONAL
+  api=4 type=0 insize=7488 outsize=0 kw=DIRECTIONAL pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 4 at (100): 'vert': output parameter 'o' not completely initialized\nCompiling Vertex program with SPOT
+  api=4 type=0 insize=7488 outsize=0 kw=SPOT pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 4 at (100): 'vert': output parameter 'o' not completely initialized\nCompiling Vertex program with POINT_COOKIE
+  api=4 type=0 insize=7488 outsize=0 kw=POINT_COOKIE pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 4 at (100): 'vert': output parameter 'o' not completely initialized\nCompiling Vertex program with DIRECTIONAL_COOKIE
+  api=4 type=0 insize=7488 outsize=0 kw=DIRECTIONAL_COOKIE pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 1 at (100): 'vert': output parameter 'o' not completely initialized\nCompiling Vertex program
+  api=1 type=0 insize=6530 outsize=0 kw= pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 1 at (100): 'vert': output parameter 'o' not completely initialized\nCompiling Vertex program with LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF
+  api=1 type=0 insize=9780 outsize=0 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 4 at (100): 'vert': output parameter 'o' not completely initialized\nCompiling Vertex program with LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON
+  api=4 type=0 insize=9780 outsize=0 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON pd= ok=0
